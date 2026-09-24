@@ -47,6 +47,20 @@ IPFS node watches and pins — the source repository stays private.
 The full manifest schema, the signing scheme, and the write order a publish
 follows are documented in `gibsfinance/bridge`'s `docs/ipfs-releases.md`.
 
+## Run your own backend
+
+The gibs.finance interface works on its own — it can call LI.FI, Relay and
+NEAR Intents directly from the browser. It also supports an optional
+backend, `@gibs/quote-service`, that fans the same quote requests out to
+those three providers and caches the answers, so many visitors asking the
+same question share one upstream call instead of each firing their own.
+Point your own build of the interface at your own instance instead of
+gibs's, or run one for any other reason.
+
+See [`self-host/`](./self-host) for the guide — read its "Image
+availability" notice first, since the published container image this needs
+does not exist yet.
+
 ## Rotation
 
 A `public-keys.json` entry is never removed while any reachable release in

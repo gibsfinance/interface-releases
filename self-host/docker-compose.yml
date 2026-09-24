@@ -1,0 +1,51 @@
+# Self-hosted @gibs/quote-service — the backend gibs.finance's own interface
+# calls at quotes.gibs.finance. See README.md in this directory for the full
+# guide, including the "Image availability" notice near the top.
+#
+# This file pulls a PUBLISHED container image. It never builds from source —
+# the interface's source code lives in a private repository, so a pull is
+# the only way a self-hoster who is not on the gibs team can run this
+# service at all.
+#
+# No provider key is required to start. An unconfigured LI.FI or Relay key
+# just runs at that provider's own public/anonymous rate limit.
+
+name: gibs-quote-service
+
+services:
+  quote-service:
+    image: ghcr.io/gibsfinance/quote-service:${QUOTE_SERVICE_IMAGE_TAG:-latest}
+    restart: unless-stopped
+    env_file:
+      # `required: false` — a fresh checkout with no .env yet still starts
+      # (every setting this service reads has a documented default; see
+      # .env.example). Needs the `path:`/`required:` object form, not a
+      # bare string, for Compose to accept a missing file instead of
+      # refusing to start.
+      - path: .env
+        required: false
+    ports:
+      # LOOPBACK ONLY by default. See README.md's "Expose it" section for
+      # how — and why to be careful — before changing this.
+      - "127.0.0.1:${QUOTE_SERVICE_PORT:-8080}:8080"
+    healthcheck:
+      # Not curl or wget — neither is installed in the runtime image
+      # (node:24-slim). A zero exit means /readyz answered ok.
+      test:
+        [
+          "CMD",
+          "node",
+          "-e",
+          "fetch('http://127.0.0.1:8080/readyz').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))",
+        ]
+      interval: 30s
+      timeout: 10s
+      retries: 10
+      start_period: 30s
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+    logging:
+      driver: json-file
+      options: { max-size: "50m", max-file: "5" }
