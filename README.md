@@ -10,6 +10,12 @@ This repository holds no application source code. It exists so a public
 GitHub repository can carry release artifacts that the owner's self-hosted
 IPFS node watches and pins — the source repository stays private.
 
+**Reading this with an artificial intelligence agent?** Start with
+[`llms.txt`](./llms.txt) — a short, structured map of this repository
+meant for exactly that. It links the verification steps below and the
+integration skill in [`skills/integrate-gibs-quotes/`](./skills/integrate-gibs-quotes)
+for adding cross-chain quotes to your own application.
+
 ## What is here
 
 - **`version.json`** — the current signed release manifest, on this
@@ -59,7 +65,9 @@ gibs's, or run one for any other reason.
 
 See [`self-host/`](./self-host) for the guide — read its "Image
 availability" notice first, since the published container image this needs
-does not exist yet.
+does not exist yet. For adding quotes to your own application, rather than
+just running the backend, see
+[`skills/integrate-gibs-quotes/SKILL.md`](./skills/integrate-gibs-quotes/SKILL.md).
 
 ## Rotation
 

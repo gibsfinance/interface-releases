@@ -1,0 +1,76 @@
+# Interface Releases
+
+> Signed release manifests for the gibs.finance interface, and a free,
+> self-hostable backend for its cross-chain quote aggregation. This
+> repository carries no application source code — it exists so a public
+> place can hold release artifacts and self-hosting instructions for a
+> project whose source repository stays private.
+
+## What a release is
+
+Every publish of the gibs.finance interface creates one GitHub Release
+here, tagged `<version>+<7-character commit>` (for example
+`1.13.1+e4f5a6b`), carrying three files:
+
+- `interface-<id>.car` — a Content Archive of that release's built
+  interface, packed for the InterPlanetary File System with Content ID
+  version 1 and raw leaves.
+- `version.json` — the signed manifest this release updated the default
+  branch to.
+- `version.json.sig` — a detached Ed25519 signature over the exact bytes
+  of that `version.json`.
+
+The current manifest also lives at this repository's default branch, as
+`version.json` and `version.json.sig`, alongside `public-keys.json` — the
+Ed25519 public key registry used to verify it.
+
+## How to verify a release
+
+1. Fetch `version.json` and `version.json.sig` — either this
+   repository's default branch, or a specific release's own assets.
+2. Fetch `public-keys.json` and find the entry whose key matches the
+   `keyId` named in `version.json.sig`.
+3. Verify the Ed25519 signature in `version.json.sig` over the exact
+   bytes of `version.json`, using that public key.
+4. Read the release you want out of `version.json`'s `releases` array (or
+   `channels`/`latest`) to get its Content ID (`cid`).
+5. Fetch the content from any InterPlanetary File System gateway using
+   that Content ID — for example
+   `https://<cid>.ipfs.4everland.io/`.
+
+## The public key
+
+`public-keys.json`, on this repository's default branch, is the source
+of truth for every key that has ever signed a `version.json` here:
+
+```json
+{
+  "<keyId>": {
+    "publicKeyBase64": "<32 raw bytes, base64>",
+    "algorithm": "Ed25519",
+    "createdAt": "<ISO 8601 timestamp>"
+  }
+}
+```
+
+An entry is never removed while any reachable release still carries a
+signature made with it — key rotation adds a new entry alongside the
+old one rather than replacing it, so every past release stays
+verifiable.
+
+## Run your own backend
+
+The gibs.finance interface works entirely on its own, calling LI.FI,
+Relay, and NEAR Intents directly from the browser. It also supports an
+optional backend, `@gibs/quote-service`, that fans the same requests out
+to those three providers and shares one upstream call between every
+visitor asking the same question — no provider key required to start.
+Point your own build of the interface at your own instance instead of
+the gibs.finance one, or run one for any other reason.
+
+See [`self-host/README.md`](self-host/README.md) for the full guide, and
+its "Image availability" notice for the current state of the published
+container image. See [`skills/integrate-gibs-quotes/SKILL.md`](skills/integrate-gibs-quotes/SKILL.md)
+for a task-oriented walkthrough: choosing a mode, installing the
+`@gibs/quotes` client package, and wiring it to a self-hosted or direct
+configuration.
