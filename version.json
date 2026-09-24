@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "name": "gibs-finance-interface",
+  "sequence": 1,
+  "channels": {
+    "staging": "1.13.0+a04cf97"
+  },
+  "latest": "1.13.0+a04cf97",
+  "defaultChannel": "staging",
+  "releases": [
+    {
+      "id": "1.13.0+a04cf97",
+      "version": "1.13.0",
+      "commit": "a04cf974650f8769481f951d412fe8fba09db0b5",
+      "cid": "bafybeid2rxz3qfnwefbvggrho42zfmgt6qzgfanzo5t4xxwbjuny6ketue",
+      "publishedAt": "2026-09-24T23:54:49.779Z",
+      "carSha256": "17525eb93d8b84ff2708d5f895bc3f1609cc05d1161511b573796d51cb72c869",
+      "branch": "staging",
+      "channel": "staging"
+    }
+  ],
+  "gateways": [
+    "4everland.io"
+  ],
+  "ipfs_address": "bafybeid2rxz3qfnwefbvggrho42zfmgt6qzgfanzo5t4xxwbjuny6ketue",
+  "ipfs_gateways": [
+    "https://bafybeid2rxz3qfnwefbvggrho42zfmgt6qzgfanzo5t4xxwbjuny6ketue.ipfs.4everland.io/"
+  ]
+}
