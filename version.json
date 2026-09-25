@@ -1,13 +1,23 @@
 {
   "schema": 1,
   "name": "gibs-finance-interface",
-  "sequence": 1,
+  "sequence": 2,
   "channels": {
-    "staging": "1.13.0+a04cf97"
+    "staging": "1.13.0+d7dca2c"
   },
-  "latest": "1.13.0+a04cf97",
+  "latest": "1.13.0+d7dca2c",
   "defaultChannel": "staging",
   "releases": [
+    {
+      "id": "1.13.0+d7dca2c",
+      "version": "1.13.0",
+      "commit": "d7dca2caf40cf65db616b5ab6cb21b59749af6b7",
+      "cid": "bafybeidoom5bwuyuesrt3dtaoaylopojwlpdbticvqqqszklrb2ykmlvzi",
+      "publishedAt": "2026-09-25T01:19:56.239Z",
+      "carSha256": "c076c85166478e04e5e90b0b269ecedae073b017671e99cba7a8abe72a473936",
+      "branch": "staging",
+      "channel": "staging"
+    },
     {
       "id": "1.13.0+a04cf97",
       "version": "1.13.0",
@@ -22,8 +32,8 @@
   "gateways": [
     "4everland.io"
   ],
-  "ipfs_address": "bafybeid2rxz3qfnwefbvggrho42zfmgt6qzgfanzo5t4xxwbjuny6ketue",
+  "ipfs_address": "bafybeidoom5bwuyuesrt3dtaoaylopojwlpdbticvqqqszklrb2ykmlvzi",
   "ipfs_gateways": [
-    "https://bafybeid2rxz3qfnwefbvggrho42zfmgt6qzgfanzo5t4xxwbjuny6ketue.ipfs.4everland.io/"
+    "https://bafybeidoom5bwuyuesrt3dtaoaylopojwlpdbticvqqqszklrb2ykmlvzi.ipfs.4everland.io/"
   ]
 }
