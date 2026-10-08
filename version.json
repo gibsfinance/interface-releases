@@ -1,13 +1,23 @@
 {
   "schema": 1,
   "name": "gibs-finance-interface",
-  "sequence": 34,
+  "sequence": 35,
   "channels": {
-    "staging": "1.16.0+b062e90"
+    "staging": "1.16.0+c4c8c07"
   },
-  "latest": "1.16.0+b062e90",
+  "latest": "1.16.0+c4c8c07",
   "defaultChannel": "staging",
   "releases": [
+    {
+      "id": "1.16.0+c4c8c07",
+      "version": "1.16.0",
+      "commit": "c4c8c07a40891b940b84150f2d318fa6de837a61",
+      "cid": "bafybeibxffmqcip2s6e4sz5eudd2uleymj2vuzvyoy2eopaxdbw7t2ewlm",
+      "publishedAt": "2026-10-08T16:20:23.566Z",
+      "carSha256": "851d8ead4444fdd92b98b34c23aff81d268ce23262fe4643ac82e59b0543d27d",
+      "branch": "staging",
+      "channel": "staging"
+    },
     {
       "id": "1.16.0+b062e90",
       "version": "1.16.0",
@@ -352,8 +362,8 @@
   "gateways": [
     "inbrowser.link"
   ],
-  "ipfs_address": "bafybeie6hbo2dvt64l353bwirnrrn45wxryyjiv4rrrwsm5xebiuw54oq4",
+  "ipfs_address": "bafybeibxffmqcip2s6e4sz5eudd2uleymj2vuzvyoy2eopaxdbw7t2ewlm",
   "ipfs_gateways": [
-    "https://bafybeie6hbo2dvt64l353bwirnrrn45wxryyjiv4rrrwsm5xebiuw54oq4.ipfs.inbrowser.link/"
+    "https://bafybeibxffmqcip2s6e4sz5eudd2uleymj2vuzvyoy2eopaxdbw7t2ewlm.ipfs.inbrowser.link/"
   ]
 }
