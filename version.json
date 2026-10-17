@@ -1,13 +1,23 @@
 {
   "schema": 1,
   "name": "gibs-finance-interface",
-  "sequence": 63,
+  "sequence": 64,
   "channels": {
-    "staging": "1.21.0+a70ab07"
+    "staging": "1.21.0+671624f"
   },
-  "latest": "1.21.0+a70ab07",
+  "latest": "1.21.0+671624f",
   "defaultChannel": "staging",
   "releases": [
+    {
+      "id": "1.21.0+671624f",
+      "version": "1.21.0",
+      "commit": "671624f20b1a8b8089d7232fa14882b4c29221d0",
+      "cid": "bafybeihh42krqdiityqtl2ouysjqz6bo5cfzswa4exmfw3stc5uffyteie",
+      "publishedAt": "2026-10-17T17:08:41.119Z",
+      "carSha256": "38408e12cbbc8fac7291d9516e0415c46dfed6aeddfb825e83372c4d16b73b3a",
+      "branch": "staging",
+      "channel": "staging"
+    },
     {
       "id": "1.21.0+a70ab07",
       "version": "1.21.0",
@@ -497,23 +507,13 @@
       "carSha256": "b82604c39ba3371135e00cdb8ef4c5028e600e3b0d0939950727597e1a77e655",
       "branch": "staging",
       "channel": "staging"
-    },
-    {
-      "id": "1.13.0+b599cd4",
-      "version": "1.13.0",
-      "commit": "b599cd44463505e4fbe304021b80d8356c532209",
-      "cid": "bafybeibcaivbhscydy7p6ozjhgutwpkkx4uva6bw26pxyefc34myg7yjlu",
-      "publishedAt": "2026-10-02T14:36:09.810Z",
-      "carSha256": "201ffe8038e4eb691d89504aafc7bcffe9fb64778600be7a7a171ba8871aeb2b",
-      "branch": "staging",
-      "channel": "staging"
     }
   ],
   "gateways": [
     "inbrowser.link"
   ],
-  "ipfs_address": "bafybeicuyfoy3mlg5nfjg6dzp7kt6ypajbojpxfmo6fbvqmyuskqqovbom",
+  "ipfs_address": "bafybeihh42krqdiityqtl2ouysjqz6bo5cfzswa4exmfw3stc5uffyteie",
   "ipfs_gateways": [
-    "https://bafybeicuyfoy3mlg5nfjg6dzp7kt6ypajbojpxfmo6fbvqmyuskqqovbom.ipfs.inbrowser.link/"
+    "https://bafybeihh42krqdiityqtl2ouysjqz6bo5cfzswa4exmfw3stc5uffyteie.ipfs.inbrowser.link/"
   ]
 }
