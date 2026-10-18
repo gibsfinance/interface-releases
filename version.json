@@ -1,12 +1,13 @@
 {
   "schema": 1,
   "name": "gibs-finance-interface",
-  "sequence": 66,
+  "sequence": 67,
   "channels": {
-    "staging": "1.21.0+a44fb0c"
+    "staging": "1.21.0+a44fb0c",
+    "master": "1.21.0+a44fb0c"
   },
   "latest": "1.21.0+a44fb0c",
-  "defaultChannel": "staging",
+  "defaultChannel": "master",
   "releases": [
     {
       "id": "1.21.0+a44fb0c",
