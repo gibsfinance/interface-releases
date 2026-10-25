@@ -1,14 +1,24 @@
 {
   "schema": 1,
   "name": "gibs-finance-interface",
-  "sequence": 101,
+  "sequence": 102,
   "channels": {
-    "staging": "1.26.0+1c12de3",
+    "staging": "1.26.0+c2a7ac6",
     "master": "1.26.0+1c12de3"
   },
   "latest": "1.26.0+1c12de3",
   "defaultChannel": "master",
   "releases": [
+    {
+      "id": "1.26.0+c2a7ac6",
+      "version": "1.26.0",
+      "commit": "c2a7ac6b8ac0a898efa0910d18d53a7492e3dde9",
+      "cid": "bafybeieoaqzef3opmuucmc3kxrd3e5e26nct6jz6mghkennhra5u5oecnq",
+      "publishedAt": "2026-10-25T22:26:03.761Z",
+      "carSha256": "a59b9af93d264b2240c504a47c1b5f3088119c0e26422035c77593f2d3b9c7da",
+      "branch": "staging",
+      "channel": "staging"
+    },
     {
       "id": "1.26.0+1c12de3",
       "version": "1.26.0",
@@ -496,16 +506,6 @@
       "cid": "bafybeigk5nt4rnd7kxgx7r5ekuf2hag63e2yq7lce3fa7spp3grett7zwm",
       "publishedAt": "2026-10-13T04:02:34.378Z",
       "carSha256": "136b65a9493de3be631cdc9749500f0cd4808ecd0d06a94e6857f09dcee715ce",
-      "branch": "staging",
-      "channel": "staging"
-    },
-    {
-      "id": "1.19.0+c51b366",
-      "version": "1.19.0",
-      "commit": "c51b3668a160370af6defccfa2bb7084aa6fd279",
-      "cid": "bafybeiagrhojmeugyd3pd2lvzjngsfzcga2gijzvip3adxuw5ijs3ogaxy",
-      "publishedAt": "2026-10-13T03:25:42.177Z",
-      "carSha256": "689a5b744e322e6715f76f1e628018e77360fa5dd5354f84e060d8ce38126929",
       "branch": "staging",
       "channel": "staging"
     }
