@@ -1,12 +1,12 @@
 {
   "schema": 1,
   "name": "gibs-finance-interface",
-  "sequence": 116,
+  "sequence": 117,
   "channels": {
     "staging": "1.28.1+794a0c2",
-    "master": "1.28.0+b5e341d"
+    "master": "1.28.1+794a0c2"
   },
-  "latest": "1.28.0+b5e341d",
+  "latest": "1.28.1+794a0c2",
   "defaultChannel": "master",
   "releases": [
     {
@@ -513,8 +513,8 @@
   "gateways": [
     "inbrowser.link"
   ],
-  "ipfs_address": "bafybeifjyx467bu2abqfrqdri5plvvalnmeytcytevrg54oeh45hzne7ua",
+  "ipfs_address": "bafybeidhgqau7x5bqlbyg7eq2rfwidqsirpt6haq5du3gzpnsz5tcibdfm",
   "ipfs_gateways": [
-    "https://bafybeifjyx467bu2abqfrqdri5plvvalnmeytcytevrg54oeh45hzne7ua.ipfs.inbrowser.link/"
+    "https://bafybeidhgqau7x5bqlbyg7eq2rfwidqsirpt6haq5du3gzpnsz5tcibdfm.ipfs.inbrowser.link/"
   ]
 }
